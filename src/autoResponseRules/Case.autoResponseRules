@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AutoResponseRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <autoResponseRule>
+        <fullName>test</fullName>
+        <active>false</active>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email</value>
+            </criteriaItems>
+            <replyToEmail>kamal.h2kwebit@z-2w61s58lug08r8610tzss99hf5bq9una8a3lv0lf3q5ww66p64.9-xbm9eam.ap</replyToEmail>
+            <senderEmail>s_kamal_it@yahoo.com</senderEmail>
+            <senderName>salesforce Support</senderName>
+            <template>unfiled$public/SupportCaseCreatedWebInquiries</template>
+        </ruleEntry>
+    </autoResponseRule>
+    <autoResponseRule>
+        <fullName>test2</fullName>
+        <active>true</active>
+    </autoResponseRule>
+</AutoResponseRules>

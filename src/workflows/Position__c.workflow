@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Email_for_HR_manager</fullName>
+        <ccEmails>s_kamal_it@yahoo.com</ccEmails>
+        <description>Email for HR manager</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>kamal.h2kwebit@gmail.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Email_Alert</template>
+    </alerts>
+    <alerts>
+        <fullName>approval_email</fullName>
+        <description>approval email</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>kamal.h2kwebit@gmail.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>s_kamal_it@yahoo.com1</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Email_Alert</template>
+    </alerts>
+    <alerts>
+        <fullName>email</fullName>
+        <description>email</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>kamal.h2kwebit@gmail.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>s_kamal_it@yahoo.com1</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Email_Alert</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>field_update</fullName>
+        <field>HiringManager__c</field>
+        <lookupValue>chatty.00d90000000xbm9eam.pn92csfibdl6@chatter.salesforce.com</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>field update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>Max Pay</fullName>
+        <actions>
+            <name>email</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Position__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Position__c.Max_Pay__c</field>
+            <operation>greaterThan</operation>
+            <value>50000</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>field update</fullName>
+        <actions>
+            <name>field_update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>task</name>
+            <type>Task</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Position__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Position__c.Functional_Area__c</field>
+            <operation>equals</operation>
+            <value>Information Technology</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <tasks>
+        <fullName>task</fullName>
+        <assignedTo>kamal.h2kwebit@gmail.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Please check</description>
+        <dueDateOffset>10</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>task</subject>
+    </tasks>
+</Workflow>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Test Object</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Test Objects</value>
+    </caseValues>
+    <fields>
+        <label><!-- Admin test --></label>
+        <name>Admin_test__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Closedate__c</name>
+        <relationshipLabel><!-- Test Objects --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Country --></label>
+        <name>Country__c</name>
+        <picklistValues>
+            <masterLabel>China</masterLabel>
+            <translation><!-- China --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>India</masterLabel>
+            <translation><!-- India --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NY</masterLabel>
+            <translation><!-- NY --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- This is a region --></help>
+        <label><!-- Region --></label>
+        <name>Region__c</name>
+        <picklistValues>
+            <masterLabel>America</masterLabel>
+            <translation><!-- America --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Asia</masterLabel>
+            <translation><!-- Asia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Europe</masterLabel>
+            <translation><!-- Europe --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- dfgft --></label>
+        <name>dfgft__c</name>
+    </fields>
+    <fields>
+        <label><!-- test122 --></label>
+        <name>test122__c</name>
+    </fields>
+    <layouts>
+        <layout>GMS</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Test Object Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- FGS --></label>
+        <name>FGS</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- GMS --></label>
+        <name>GMS</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

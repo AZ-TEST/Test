@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectSharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <criteriaBasedRules>
+        <fullName>CSO_sharing</fullName>
+        <sharedTo>
+            <role>CSO</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Functional_Area__c</field>
+            <operation>equals</operation>
+            <value>Information Technology</value>
+        </criteriaItems>
+        <accessLevel>Edit</accessLevel>
+        <name>CSO sharing</name>
+    </criteriaBasedRules>
+</CustomObjectSharingRules>

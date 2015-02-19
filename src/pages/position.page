@@ -1,0 +1,27 @@
+<apex:page standardController="Position__c" extensions="positioncontroller">
+<apex:form >
+  <apex:pageBlock >
+  <apex:pageBlockSection >
+  <apex:pageblockTable value="{!all}" var="acc">
+  <apex:column headerValue="Position Name">
+          <apex:outputfield value="{!acc.name}" />
+       </apex:column>   
+       <apex:column headerValue="Position ID">
+          <apex:outputField value="{!acc.id}"/>
+        </apex:column>
+  </apex:pageblockTable>
+    
+  </apex:pageBlockSection>
+  
+  <apex:pageblockButtons >
+  <apex:commandButton value="SAVE" action="{!save}">
+  <apex:commandButton value="FIRST" />
+  <apex:commandButton value="PRE" />
+  <apex:commandButton value="NXT" />
+  <apex:commandButton value="END" />
+  
+  </apex:commandbutton>
+  </apex:pageblockButtons>
+  </apex:pageBlock>
+  </apex:form>
+</apex:page>

@@ -1,0 +1,62 @@
+<apex:page Controller="AccountDetails" tabstyle="Account" >
+<apex:form >
+<apex:pageBlock >
+
+
+ <apex:outputpanel id="Panel">
+ 
+
+search
+<apex:inputText size="10"/> 
+Date
+   
+<apex:inputText value="{!datename}" size="10" id="demo" onfocus="AccountDetails.pickDate(false, this , false)" />
+<apex:commandbutton value="Save" action="{!saving}"/>
+
+
+
+   <apex:pageBlockSection >
+      <apex:pageBlockTable value="{!wrp}" var="acc">
+      
+        <apex:column headerValue="Account Name">
+          <apex:outputfield value="{!acc.ASD.name}" rendered="{!!acc.c}"/>
+          <apex:inputField value="{!acc.ASD.name}" rendered="{!acc.c}"/>
+        </apex:column>
+        
+        <apex:column headerValue="AccountNumber"/>
+        
+        <apex:column headerValue="ID">
+           <apex:outputfield value="{!acc.ASD.id}"/>
+        </apex:column>
+        
+        <apex:column headerValue="Check">
+           <apex:inputCheckbox value="{!acc.c}" >
+           <apex:actionsupport event="onclick" rerender="Panel"/>
+           </apex:inputcheckbox>
+        </apex:column>
+        
+        <apex:column headerValue="View">
+        <apex:commandbutton value="Contact Details" action="{!view}" rerender="panel2">
+        <apex:param name="view" assignto="{!idvalue}" value="{!acc.ASD.id}"/>
+        </apex:commandbutton>
+     
+      </apex:column>        
+     </apex:pageBlockTable>
+     <apex:outputPanel id="panel2">
+     <apex:pageblocktable value="{!con}" var="cc">     
+     <apex:column headervalue="Name">
+     <apex:outputfield value="{!cc.name}"/>
+     </apex:column>
+     
+     
+     </apex:pageblocktable>
+    </apex:outputPanel>
+
+   </apex:pageBlockSection>
+   </apex:outputpanel>
+   
+</apex:pageBlock>
+
+</apex:form>
+
+</apex:page>

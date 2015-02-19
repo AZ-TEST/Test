@@ -1,0 +1,6 @@
+<apex:page standardController="Opportunity" recordSetVar="opportunities" tabStyle="Opportunity" sidebar="false">
+
+<p>Enter an alphabetic character for the "Close Date," 
+       then click Save to see what happens.</p>
+
+</apex:page>

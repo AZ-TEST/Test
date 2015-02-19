@@ -1,0 +1,32 @@
+<apex:page standardController="Position__c" extensions="positioncontroller">
+<apex:form >
+  <apex:pageBlock >
+  <apex:pageBlockSection title="Sample" columns="2">
+  
+  
+          <apex:inputfield value="{!Position__c.name}" />
+          <apex:inputfield value="{!Position__c.Job_Level__c}" />
+          <apex:inputfield value="{!Position__c.Functional_Area__c}" />
+          <apex:inputField value="{!Position__c.Min_Pay__c}"/>
+          
+<apex:inputField value="{!Position__c.Max_Pay__c}"/>         
+          <apex:inputField value="{!Position__c.id}"/>
+  
+  
+  </apex:pageBlockSection>
+  
+<apex:pageblockSection title="Test">
+<apex:repeat value="{!$ObjectType.Position__c.FieldSets.sample}" var="f">
+  <apex:outputField value="{!Position__c[f]}"/>
+  </apex:repeat>
+
+
+</apex:pageblockSection>
+  <apex:pageblockButtons >
+  <apex:commandButton value="SAVE" action="{!save}">
+  
+  </apex:commandbutton>
+  </apex:pageblockButtons>
+  </apex:pageBlock>
+  </apex:form>
+  </apex:page>

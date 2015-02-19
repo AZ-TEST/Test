@@ -1,0 +1,36 @@
+<apex:page standardController="Lead" extensions="leads">
+<apex:form >
+<apex:pageBlock title="LEADS">
+<apex:pageBlockSection >
+<apex:pageBlockTable value="{!con}" var="lll">
+
+<apex:column headerValue="Name">
+<apex:outputField value="{!lll.lastname}"/>
+
+</apex:column>
+<apex:column headerValue="Id">
+<apex:outputField value="{!lll.id}"/>
+
+</apex:column>
+<apex:column headerValue="Company">
+<apex:outputField value="{!lll.company}"/>
+
+</apex:column>
+
+</apex:pageBlockTable> 
+
+
+
+</apex:pageBlockSection>
+
+
+
+
+
+</apex:pageBlock>
+
+
+
+</apex:form>
+  
+</apex:page>

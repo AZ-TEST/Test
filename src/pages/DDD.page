@@ -1,0 +1,14 @@
+<apex:page standardController="Account" sidebar="false" showHeader="false" >
+<apex:form >
+
+<apex:pageBlock title="Test">
+
+<apex:pageBlockSection columns="3" >
+serarch:
+value:
+
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+  
+</apex:page>

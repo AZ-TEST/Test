@@ -1,0 +1,13 @@
+<apex:page standardController="Account" sidebar="false" >
+<apex:form >
+<apex:pageBlock title="Hello {!$User.FirstName}!">
+you are viewing the {!account.name} account <p/>
+Change account Name: <p/>
+<apex:inputField value="{!account.name}"/> <p/>
+<apex:commandButton action="{!save}" value=" Save New Account Name"/>
+
+</apex:pageBlock>
+<apex:commandLink action="www.google.com"/>
+</apex:form>
+
+</apex:page>

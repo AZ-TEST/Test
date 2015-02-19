@@ -1,0 +1,19 @@
+<apex:page standardController="Account">
+<apex:form >
+<apex:pageBlock >
+<apex:pageblockSection columns="2">
+  <apex:repeat value="{!$ObjectType.Account.FieldSets.Account_field_sets}" var="f">
+  <apex:outputField value="{!Account[f]}"/>
+  </apex:repeat>
+  </apex:pageblockSection>
+    
+  <apex:pageBlockSection columns="3" >
+  
+  serarch:<br></br>
+  Add:
+  Sub:
+  </apex:pageBlockSection>
+  </apex:pageBlock>
+  </apex:form>
+
+</apex:page>

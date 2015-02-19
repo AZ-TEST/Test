@@ -1,0 +1,28 @@
+<apex:page standardController="contract" extensions="Contracts">
+
+<apex:form >
+<apex:pageBlock >
+<apex:pageBlockSection >
+<apex:pageBlockTable value="{!con}" var="acc">
+<apex:column headerValue="Name">
+
+<apex:outputField value="{!acc.ContractNumber}"/>
+
+</apex:column>
+<apex:column headerValue=" ID">
+          <apex:outputField value="{!acc.id}"/>
+        </apex:column>
+
+</apex:pageBlockTable>
+<apex:commandButton value="SAVE" action="{!save}"/>
+
+</apex:pageBlockSection>
+
+
+</apex:pageBlock>
+
+</apex:form>
+  
+  
+  
+</apex:page>
